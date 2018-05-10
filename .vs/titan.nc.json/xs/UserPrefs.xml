@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{7D1E51D1-E1F6-4735-A082-C5B1A9B380F4}|Default">
+  <MonoDevelop.Ide.ItemProperties.titan.nc.json FirstBuild="True" HideGettingStarted="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="titan.nc.json/streams/load_schema.cs">
+    <Files>
+      <File FileName="titan.nc.json/models/single/base_object.cs" Line="37" Column="1" />
+      <File FileName="titan.nc.json/models/many/properties.cs" Line="5" Column="28" />
+      <File FileName="titan.nc.json/models/many/definitions.cs" Line="9" Column="1" />
+      <File FileName="titan.nc.json/models/single/definition.cs" Line="2" Column="31" />
+      <File FileName="titan.nc.json/models/single/property.cs" Line="3" Column="38" />
+      <File FileName="titan.nc.json/models/single/reference.cs" Line="3" Column="39" />
+      <File FileName="titan.nc.json/models/jsonschema.cs" Line="12" Column="13" />
+      <File FileName="titan.nc.json/streams/load_schema.cs" Line="9" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
