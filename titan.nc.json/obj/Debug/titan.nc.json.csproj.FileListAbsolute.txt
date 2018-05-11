@@ -1,0 +1,6 @@
+/home/nd/repos/titan.nc.json/titan.nc.json/bin/Debug/titan.nc.json.dll
+/home/nd/repos/titan.nc.json/titan.nc.json/bin/Debug/titan.nc.json.pdb
+/home/nd/repos/titan.nc.json/titan.nc.json/obj/Debug/titan.nc.json.csprojResolveAssemblyReference.cache
+/home/nd/repos/titan.nc.json/titan.nc.json/obj/Debug/titan.nc.json.csproj.CoreCompileInputs.cache
+/home/nd/repos/titan.nc.json/titan.nc.json/obj/Debug/titan.nc.json.dll
+/home/nd/repos/titan.nc.json/titan.nc.json/obj/Debug/titan.nc.json.pdb

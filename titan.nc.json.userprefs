@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{28C72CD1-1A90-4FF2-B8E6-F267172B0D91}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="titan.nc.json/models/mutable.cs">
+    <Files>
+      <File FileName="titan.nc.json/models/types/complex/json_type.cs" Line="30" Column="10" />
+      <File FileName="titan.nc.json/models/types/complex/json_array.cs" Line="7" Column="28" />
+      <File FileName="titan.nc.json/models/types/simple/json_decimal.cs" Line="4" Column="1" />
+      <File FileName="titan.nc.json/models/types/simple/json_int.cs" Line="8" Column="31" />
+      <File FileName="titan.nc.json/models/types/simple/json_bool.cs" Line="7" Column="10" />
+      <File FileName="titan.nc.json/models/jsonschema.cs" Line="1" Column="1" />
+      <File FileName="titan.nc.json/models/mutable.cs" Line="49" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="titan.nc.json" expanded="True">
+            <Node name="test2" expanded="True" />
+            <Node name="titan.nc.json" expanded="True">
+              <Node name="models" expanded="True">
+                <Node name="single" expanded="True" />
+                <Node name="types" expanded="True">
+                  <Node name="complex" expanded="True" />
+                  <Node name="simple" expanded="True" />
+                </Node>
+                <Node name="mutable.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/nd/repos/titan.nc.json/titan.nc.json/models/mutable.cs" relfile="titan.nc.json/models/mutable.cs" line="66" column="1" />
+      <Breakpoint file="/home/nd/repos/titan.nc.json/test/Program.cs" relfile="test/Program.cs" line="8" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.test2 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

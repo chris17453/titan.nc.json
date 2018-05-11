@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 namespace titan.nc.json.models.single {
     
-    public enum object_type {@string,array,@object,@bool,@int,@decimal,none}; 
+   
+
+
     public class base_object {
         public  object_type         type      { get; set; }
         public  string              parent    { get; set; }
         public  string              name      { get; set; }
         public  object              value     { get; set; }
-        private IDictionary<string,base_object>   o_value   { get; set; }
+        private Dictionary<string,base_object>   o_value   { get; set; }
         private List<base_object>   lo_value  { get; set; }
         private decimal             d_value   { get; set; }
         private bool                b_value   { get; set; }
@@ -27,11 +29,13 @@ namespace titan.nc.json.models.single {
         public string Add(base_object o){
             if(this.type==object_type.@object) {
                 if(String.IsNullOrWhiteSpace(o.name)) return null;
+                if(null==o_value) o_value=new Dictionary<string,base_object>();
                 o_value[o.name]=o;
                 return o.name;
             }
             if(this.type==object_type.array) {
-                string name=o_value.Count.ToString();;
+                if(null==lo_value) lo_value=new List<base_object>();
+                string name=lo_value.Count.ToString();
                 lo_value.Add(o);
                 return name;
             }            

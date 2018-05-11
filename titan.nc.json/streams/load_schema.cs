@@ -7,7 +7,7 @@ namespace titan.nc.json
     {
         public static base_object from_file(string file){
             string json_string=File.ReadAllText(file);
-            base_object o=models.mutable(json_string);
+            base_object o=models.mutable.build("root",json_string);
             return o;
         }
     }

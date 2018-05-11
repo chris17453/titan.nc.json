@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using  titan.nc.json.models.single;
+using  titan.nc.json.types;
 
 
 namespace titan.nc.json.models {
     public static class mutable {
-        public static base_object mutable(string data) {
+        public static base_object build(string root_name,string data) {
             uint    len         =(uint)data.Length;
             uint    depth       =0;
             uint    node        =0;
@@ -18,7 +19,7 @@ namespace titan.nc.json.models {
             base_object curent  =null;
             base_object last    =null;
             object_type type    =object_type.@object;
-            int name_index=0;
+            int last_index=0;
             string name=String.Empty;;
             //objects.Add(root);
             for(int i=0;i<len;i++){
@@ -29,19 +30,23 @@ namespace titan.nc.json.models {
                     else                in_quote=true; 
                     continue;
                 } 
+
+                if(in_quote) continue;
                     
                     
                 switch(c){
-                    case '{'  : make_new_object=true; ++depth; type=object_type.@object; name_index=i;  break;
-                    case ':'  : make_new_object=true; name=data.Substring(name_index,i-name_index); break;
-                    case '}'  : make_new_object=true; --depth; break;
-                    case ','  : make_new_object=true; ++node; break;
-                    case '['  : make_new_object=true; type=object_type.@array; break;
-                    case ']'  : make_new_object=true; type=object_type.none;   break;
+                    case '{'  : make_new_object=true; in_name=true;  in_value=false;  ++depth; type=object_type.@object; last_index=i;  break;
+                    case ':'  : make_new_object=false; in_name=false; in_value=true;   name=data.Substring(last_index,i-last_index); last_index=i; break;
+                    case '}'  : make_new_object=true; in_name=false; in_value=false; --depth; last_index=i; break;
+                    case ','  : make_new_object=true; in_name=true;  in_value=false;  ++node;  last_index=i; break;
+                    case '['  : make_new_object=true; in_name=false; in_value=false;  type=object_type.@array; last_index=i; break;
+                    case ']'  : make_new_object=true; in_name=false; in_value=false;  type=object_type.none;   last_index=i; break;
                 }
                 if(make_new_object) {
+                    make_new_object=false;
                     last=curent;
-                    curent=new base_object(name,type);
+                    if(root==null) name=root_name;
+                    curent=new json_type(type,);
                     if(null!=last) { 
                         if(last.type==object_type.array ||
                            last.type==object_type.@object) {
