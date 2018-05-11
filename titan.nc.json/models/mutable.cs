@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using  titan.nc.json.models.single;
 using  titan.nc.json.types;
@@ -46,7 +46,7 @@ namespace titan.nc.json.models {
                     make_new_object=false;
                     last=curent;
                     if(root==null) name=root_name;
-                    curent=new json_type(type,);
+                    //curent=new json_type(type,);
                     if(null!=last) { 
                         if(last.type==object_type.array ||
                            last.type==object_type.@object) {

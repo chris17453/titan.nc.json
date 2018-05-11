@@ -10,8 +10,9 @@ namespace titan.nc.json.types{
         private json_object  o_value { get; set; }
         private json_array   a_value { get; set; }
 
-
-
+    
+        /*--- generic constructors --*/
+        
         public json_type(json_int o) {
             type=object_type.@int;
             i_value=o;
@@ -36,7 +37,26 @@ namespace titan.nc.json.types{
             type=object_type.@object;
             o_value=o;
         }
-
+        /*-- direct creation --*/
+        
+        public json_type(int o) {
+            type=object_type.@int;
+            i_value=new json_int(o);
+        }
+        public json_type(bool o) {
+            type=object_type.@bool;
+            b_value=new json_bool(o);
+        }
+        public json_type(decimal o) {
+            type=object_type.@decimal;
+            d_value=new json_decimal(o);
+        }
+        public json_type(string o) {
+            type=object_type.@string;
+            s_value=new json_string(o);
+        }
+        
+        /*-- conversion --*/
 
         public static implicit operator json_int(json_type o){
             if(o.type==object_type.@int) return o.i_value;
@@ -63,5 +83,18 @@ namespace titan.nc.json.types{
             if(o.type==object_type.@object) return o.o_value;
             throw new InvalidCastException("Wrong JSON type, not a json_object");
         }
+        
+        public override string ToString() {
+            switch(type){
+                case object_type.@bool    : return b_value.ToString();
+                case object_type.@decimal : return d_value.ToString();
+                case object_type.@int     : return i_value.ToString();
+                case object_type.@object  : return o_value.ToString();
+                case object_type.@string  : return s_value.ToString();
+                case object_type.array    : return a_value.ToString();
+                default : return "";
+            }
+        }
+
     }
 }

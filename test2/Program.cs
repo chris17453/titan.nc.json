@@ -1,5 +1,6 @@
 ﻿using System;
 using titan.nc.json;
+using titan.nc.json.types;
 using titan.nc.json.models.single;
 namespace test2 {
     class Program {
@@ -7,6 +8,7 @@ namespace test2 {
             string file="/home/nd/repos/kafka-project/jsonschema/schema.dev.box.account-management.event.AccountCreated.json";
             base_object obj_schema=schema.from_file(file);
 
+            Console.ReadKey();
         }
     }
 }
